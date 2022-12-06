@@ -19,7 +19,9 @@ public class TaskDbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+        db.execSQL("DROP TABLE IF EXISTS " + TaskContract.TaskEntry.TABLE);
+        onCreate(db);
 
     }
 }
