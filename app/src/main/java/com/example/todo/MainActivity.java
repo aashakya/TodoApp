@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "Add a new task");
             final EditText taskEditText = new EditText(this);
             AlertDialog dialog = new AlertDialog.Builder(this).setTitle("Add a new task")
-                    .setMessage("What do you want to do next?")
+                    .setMessage("What do you want accomplish next?")
                     .setView(taskEditText)
                     .setPositiveButton("Add", (dialog1, which) -> {
                         String task = String.valueOf(taskEditText.getText());
